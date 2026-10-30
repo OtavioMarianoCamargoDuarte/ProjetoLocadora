@@ -36,6 +36,7 @@ def listar_veiculos():
             print(f"Modelo: {item['modelo']}")
             print(f"Ano: {item['ano']}")
             print('-------------------')
+            print()
 
 def buscar_veiculo():
     placa_busca = input('Digite a placa do veículo que deseja buscar: ')
