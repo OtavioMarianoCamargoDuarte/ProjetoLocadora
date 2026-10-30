@@ -1,30 +1,54 @@
->>>> Sistema de Locadora de Veículos <<<<
-Projeto desenvolvido para estudo de Python.
+🚗 Sistema de Locadora de Veículos
+Projeto desenvolvido em Python com o objetivo de simular a gestão de uma locadora de veículos para motoristas de aplicativo.
 
->>> Objetivo
-Criar um sistema de gestão para aluguel de veículos destinados a motoristas de aplicativo.
+📌 Funcionalidades
+🚘 Veículos
+✅ Cadastro
+✅ Busca
+✅ Listagem
+✅ Edição
+✅ Exclusão
 
->>> Funcionalidades
+👤 Motoristas
+✅ Cadastro
+✅ Busca
+✅ Listagem
+✅ Edição
+✅ Exclusão
 
->> Veículos
-> Cadastro
-> Busca
-> Listagem
-> Edição
-> Exclusão
+🏗 Estrutura do Projeto
+ProjetoLocadora/ 
+│ 
+├── main.py 
+├── menus.py 
+├── veiculos.py 
+├── motoristas.py 
+├── alugueis.py 
+└── pagamentos.py
 
->> Motoristas
-> Cadastro
-> Busca
-> Listagem
-> Edição
-> Exclusão
+🛠 Tecnologias
+.Python 3
 
->> Tecnologias
-> Python
+🚀 Próximas Implementações
+.Sistema de aluguéis
+.Persistência em JSON
+.Banco SQLite
+.Controle financeiro
+.Relatórios
+.Interface gráfica
 
->> Próximas etapas
-> Módulo de aluguéis
-> Persistência em JSON
-> SQLite
-> Interface gráfica
+📚 Conceitos Praticados
+.Funções
+.Listas
+.Dicionários
+.Loops (for e while)
+.Estruturas condicionais (if)
+.Modularização
+.CRUD
+.Validação de dados
+
+🎯 Objetivo do Projeto
+Este projeto está sendo desenvolvido como parte da minha jornada de estudos em Python, aplicando conceitos fundamentais da linguagem na construção de um sistema de gestão com regras de negócio reais.
+
+Autor
+Otavio Mariano Camargo Duarte
