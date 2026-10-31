@@ -10,11 +10,13 @@ def cadastrar_veiculo():
             return
     modelo = input('Digite o modelo: ')
     ano = int(input('Digite o ano: '))
+    status = "Disponível"
 
     veiculo = {
         'placa': placa,
         'modelo': modelo,
-        'ano': ano
+        'ano': ano,
+        'status': status
     }
 
     veiculos.append(veiculo)
@@ -23,6 +25,7 @@ def cadastrar_veiculo():
     print(f'Placa: {placa}')
     print(f'Modelo: {modelo}')
     print(f'Ano: {ano}')
+    print(f'Status: {status}')
     print(f'Total de veículos cadastrados: {len(veiculos)}')
 
 def listar_veiculos():
@@ -35,6 +38,7 @@ def listar_veiculos():
             print(f"Placa: {item['placa']}")
             print(f"Modelo: {item['modelo']}")
             print(f"Ano: {item['ano']}")
+            print(f"Status: {item['status']}")
             print('-------------------')
             print()
 
@@ -50,6 +54,7 @@ def buscar_veiculo():
             print(f"Placa: {item['placa']}")
             print(f"Modelo: {item['modelo']}")
             print(f"Ano: {item['ano']}")
+            print(f"Status: {item['status']}")
             print('-------------------')
 
             break
@@ -70,10 +75,12 @@ def editar_veiculo():
             print(f'Placa: {item["placa"]}')
             print(f'Modelo: {item["modelo"]}')
             print(f'Ano: {item["ano"]}')
+            print(f'Status: {item["status"]}')
             print('-------------------')
             print('Opções:')
             print('[1] - Editar modelo')
             print('[2] - Editar ano')
+            print('[3] - Editar status')
             print('[0] - Cancelar')
 
             escolha_edicao = int(input('Opção: '))
@@ -85,6 +92,7 @@ def editar_veiculo():
                 print(f'Placa: {item["placa"]}')
                 print(f'Modelo: {item["modelo"]}')
                 print(f'Ano: {item["ano"]}')
+                print(f'Status: {item["status"]}')
                 print('-------------------')
                 break
 
@@ -95,6 +103,18 @@ def editar_veiculo():
                 print(f'Placa: {item["placa"]}')
                 print(f'Modelo: {item["modelo"]}')
                 print(f'Ano: {item["ano"]}')
+                print(f'Status: {item["status"]}')
+                print('-------------------')
+                break
+
+            elif escolha_edicao == 3:
+                novo_status = input('Digite o novo status (disponível, em manutenção, alugado): ')
+                item['status'] = novo_status
+                print('Veículo atualizado com sucesso!')
+                print(f'Placa: {item["placa"]}')
+                print(f'Modelo: {item["modelo"]}')
+                print(f'Ano: {item["ano"]}')
+                print(f'Status: {item["status"]}')
                 print('-------------------')
                 break
 
@@ -121,6 +141,7 @@ def excluir_veiculo():
             print(f'Placa: {item["placa"]}')
             print(f'Modelo: {item["modelo"]}')
             print(f'Ano: {item["ano"]}')
+            print(f'Status: {item["status"]}')  
             print('-------------------')
             print('Deseja realmente excluir este veículo?')
             print('[1] - Sim')
