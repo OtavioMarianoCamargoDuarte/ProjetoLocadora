@@ -57,14 +57,24 @@ ProjetoLocadora/
 .Interface gráfica
 
 📚 Conceitos Praticados
-.Funções
-.Listas
-.Dicionários
+.Estrutura de Dados
+Listas
+Dicionários
 .Loops (for e while)
 .Estruturas condicionais (if)
 .Modularização
+main.py
+menus.py
+veiculos.py
+motoristas.py
 .CRUD
+Create
+Read
+Update
+Delete
 .Validação de dados
+CPF único
+Placa Única
 
 🎯 Objetivo do Projeto
 Este projeto está sendo desenvolvido como parte da minha jornada de estudos em Python, aplicando conceitos fundamentais da linguagem na construção de um sistema de gestão com regras de negócio reais.
