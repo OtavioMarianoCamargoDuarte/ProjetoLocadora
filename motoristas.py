@@ -3,6 +3,8 @@ from persistencia import (
     carregar_dados
 )
 
+import alugueis
+
 motoristas = carregar_dados("dados/motoristas.json")
 
 def cadastrar_motorista():
@@ -237,7 +239,16 @@ def excluir_motorista():
 
     for item in motoristas:
         if item['cpf'] == cpf_excluir:
+            if item['status'] == 'Inadimplente':
+                print('Não é possível excluir um motorista inadimplente.')
+                return
+            
             encontrado = True
+
+            for aluguel in alugueis:
+                if aluguel['status'] == 'Ativo' and aluguel['cpf_motorista'] == cpf_excluir:
+                    print('Não é possível excluir um motorista que possui aluguel ativo.')
+                    return
             print('Motorista encontrado:')
             print(f'Nome: {item["nome"]}')
             print(f'Data de Nascimento: {item["data_nascimento"]}')

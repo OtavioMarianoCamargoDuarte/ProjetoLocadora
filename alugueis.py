@@ -30,7 +30,14 @@ def criar_aluguel():
 
         for motorista in motoristas:
             if motorista['cpf'] == cpf_solicitar:
+
                 encontrado = True
+
+                for aluguel in alugueis:
+                    if aluguel['status'] == 'Ativo' and aluguel['cpf_motorista'] == cpf_solicitar:
+                        print('Motorista já possui um aluguel ativo.')
+                        return
+
                 if motorista['status'] != 'Ativo':
                     print('Motorista indisponível para locação.')
                     print(f'Status: {motorista["status"]}')

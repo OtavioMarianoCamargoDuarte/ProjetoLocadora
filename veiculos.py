@@ -193,6 +193,9 @@ def excluir_veiculo():
     for item in veiculos:
         if item['placa'] == placa_excluir:
             encontrado = True
+            if item['status'] == 'Alugado':
+                print('Não é possível excluir um veículo que possui aluguel ativo.')
+                return
             print('Veículo encontrado:')
             print(f'Placa: {item["placa"]}')
             print(f'Modelo: {item["modelo"]}')
