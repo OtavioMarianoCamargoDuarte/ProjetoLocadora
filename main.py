@@ -1,23 +1,16 @@
-from veiculos import (
-    cadastrar_veiculo,
-    listar_veiculos,
-    buscar_veiculo,
-    editar_veiculo,
-    excluir_veiculo
-)
+"""
+Sistema de gerenciamento para uma locadora de veículos.
 
-from motoristas import (
-    cadastrar_motorista,
-    listar_motoristas,
-    buscar_motorista,
-    editar_motorista,
-    excluir_motorista
-)
+Permite o gerenciamento de veículos, motoristas,
+aluguéis e relatórios, com persistência de dados
+em arquivos JSON.
+"""
 
 from menus import (
     menu_veiculos,
     menu_motoristas,
-    menu_alugueis
+    menu_alugueis,
+    menu_relatorios
 )
 
 escolha_usuario = -1
@@ -27,6 +20,7 @@ while escolha_usuario != 0:
     print('[1] - Veículos')
     print('[2] - Motoristas')
     print('[3] - Aluguéis')
+    print('[4] - Relatórios')
     print('[0] - Sair')
     print('=' * len('===== LOCADORA ====='))
 
@@ -38,6 +32,8 @@ while escolha_usuario != 0:
         menu_motoristas()
     elif escolha_usuario == 3:
         menu_alugueis()
+    elif escolha_usuario == 4:
+        menu_relatorios()
     elif escolha_usuario == 0:
         print('Saindo do programa...')
     else:

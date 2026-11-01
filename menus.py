@@ -21,6 +21,16 @@ from alugueis import (
     encerrar_aluguel
 )
 
+from relatorios import (
+    relatorio_veiculos_disponiveis,
+    relatorio_veiculos_alugados,
+    relatorio_motoristas_ativos,
+    relatorio_motoristas_inadimplentes,
+    relatorio_motoristas_bloqueados,
+    relatorio_alugueis_ativos,
+    relatorio_alugueis_encerrados
+)
+
 def menu_veiculos():
     """
     Exibe o menu de gerenciamento de veículos da locadora.
@@ -108,7 +118,7 @@ def menu_alugueis():
     """
 
     escolha_usuario = -1
-    
+
     while escolha_usuario != 0:
         print('===== ALUGUEIS =====')
         print('[1] - Criar aluguel')
@@ -128,6 +138,54 @@ def menu_alugueis():
             listar_alugueis()
         elif escolha_usuario == 4:
             encerrar_aluguel()
+        elif escolha_usuario == 0:
+            print('Voltando ao menu principal...')
+        else:
+            print('Opção inválida. Tente novamente.')
+
+def menu_relatorios():
+    """
+    Exibe o menu de relatórios da locadora.
+
+    Permite ao usuário acessar relatórios de veículos,
+    motoristas e aluguéis, apresentando informações
+    organizadas sobre a situação atual da locadora.
+    O menu permanece em execução até que o usuário
+    escolha retornar ao menu principal.
+    """
+    escolha_usuario = -1
+
+    while escolha_usuario != 0:
+        print('===== RELATÓRIOS =====')
+        print('[1] - Veículos disponíveis')
+        print('[2] - Veículos alugados')
+        print()
+        print('[3] - Motoristas ativos')
+        print('[4] - Motoristas inadimplentes')
+        print('[5] - Motoristas bloqueados')
+        print()
+        print('[6] - Aluguéis ativos')
+        print('[7] - Aluguéis encerrados')
+        print()
+        print('[0] - Voltar')
+        print('=' * len('===== RELATÓRIOS ====='))
+
+        escolha_usuario = int(input('Opção: '))
+
+        if escolha_usuario == 1:
+            relatorio_veiculos_disponiveis()
+        elif escolha_usuario == 2:
+            relatorio_veiculos_alugados()
+        elif escolha_usuario == 3:
+            relatorio_motoristas_ativos()
+        elif escolha_usuario == 4:
+            relatorio_motoristas_inadimplentes()
+        elif escolha_usuario == 5:
+            relatorio_motoristas_bloqueados()
+        elif escolha_usuario == 6:
+            relatorio_alugueis_ativos()
+        elif escolha_usuario == 7:
+            relatorio_alugueis_encerrados()
         elif escolha_usuario == 0:
             print('Voltando ao menu principal...')
         else:
