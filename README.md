@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-green)
+![Version](https://img.shields.io/badge/version-v1.2-orange)
+
 ## 🚗 Projeto Locadora
 
 Sistema de gerenciamento para uma locadora de veículos desenvolvido em Python.
