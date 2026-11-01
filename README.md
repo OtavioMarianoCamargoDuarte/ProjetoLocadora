@@ -1,6 +1,8 @@
 🚗 Sistema de Locadora de Veículos
 Projeto desenvolvido em Python com o objetivo de simular a gestão de uma locadora de veículos para motoristas de aplicativo.
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 📌 Funcionalidades
 🚘 Veículos
 ✅ Cadastro
@@ -8,6 +10,8 @@ Projeto desenvolvido em Python com o objetivo de simular a gestão de uma locado
 ✅ Listagem
 ✅ Edição
 ✅ Exclusão
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 📈 Evolução do Projeto
   --  Versão Atual  --
@@ -29,6 +33,47 @@ Projeto desenvolvido em Python com o objetivo de simular a gestão de uma locado
 ⏳ Relatórios
 
 ⏳ Interface gráfica
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+📦 Versões
+v1.0
+Primeira versão funcional da Locadora.
+
+Funcionalidades
+CRUD completo de veículos
+CRUD completo de motoristas
+Fluxo completo de aluguéis
+Persistência de dados em arquivos JSON
+Modularização do sistema
+Documentação com docstrings
+
+v1.1
+Versão focada em regras de negócio e informações gerenciais.
+
+Novidades
+✅ Validações de Integridade
+Impedida a exclusão de veículos com aluguel ativo
+Impedida a exclusão de motoristas inadimplentes
+Impedida a exclusão de motoristas com aluguel ativo
+Impedida a criação de múltiplos aluguéis ativos para o mesmo motorista
+✅ Relatórios Gerenciais
+Veículos
+Veículos disponíveis
+Veículos alugados
+Motoristas
+Motoristas ativos
+Motoristas inadimplentes
+Motoristas bloqueados
+Aluguéis
+Aluguéis ativos
+Aluguéis encerrados
+✅ Melhorias Gerais
+Integração dos relatórios ao menu principal
+Aprimoramento das regras de negócio da locadora
+Maior consistência e integridade dos dados
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 👤 Motoristas
 ✅ Cadastro
@@ -58,6 +103,8 @@ ProjetoLocadora/
 .Relatórios
 .Interface gráfica
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 📚 Conceitos Praticados
 .Estrutura de Dados
 Listas
@@ -78,8 +125,14 @@ Delete
 CPF único
 Placa Única
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 🎯 Objetivo do Projeto
 Este projeto está sendo desenvolvido como parte da minha jornada de estudos em Python, aplicando conceitos fundamentais da linguagem na construção de um sistema de gestão com regras de negócio reais.
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 Autor
 Otavio Mariano Camargo Duarte
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
