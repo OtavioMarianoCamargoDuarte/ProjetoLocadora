@@ -1,0 +1,1 @@
+[{"id": 1, "cpf_motorista": "123.456.789-10", "placa_veiculo": "ABC123", "data_inicio": "01/11/2026", "valor_semanal": 500.0, "status": "Ativo"}, {"id": 2, "cpf_motorista": "456.456.789-99", "placa_veiculo": "RTS1245", "data_inicio": "04/05/2026", "valor_semanal": 450.0, "status": "Encerrado"}]
