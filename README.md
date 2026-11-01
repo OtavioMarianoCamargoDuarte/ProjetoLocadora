@@ -16,15 +16,17 @@ Projeto desenvolvido em Python com o objetivo de simular a gestão de uma locado
 
 ✅ CRUD completo de motoristas
 
-✅ Sistema de menus modularizado
+✅ Fluxo completo de aluguéis
 
-✅ Módulo de aluguéis em desenvolvimento
+✅ Persistência em JSON
 
-🔄 Persistência com JSON
+✅ Controle de disponibilidade dos veículos
 
-⏳ Banco de dados SQLite
+🔄 Banco de dados SQLite
 
 ⏳ Controle financeiro
+
+⏳ Relatórios
 
 ⏳ Interface gráfica
 
