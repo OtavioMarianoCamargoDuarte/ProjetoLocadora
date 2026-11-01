@@ -3,8 +3,6 @@ from persistencia import (
     carregar_dados
 )
 
-import alugueis
-
 motoristas = carregar_dados("dados/motoristas.json")
 
 def cadastrar_motorista():
@@ -233,6 +231,8 @@ def excluir_motorista():
     Caso o CPF informado não esteja cadastrado, informa que o
     motorista não foi encontrado.
     """
+    from alugueis import alugueis
+
     cpf_excluir = input('Digite o CPF do motorista que deseja excluir: ')
 
     encontrado = False

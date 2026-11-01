@@ -10,7 +10,11 @@ from menus import (
     menu_veiculos,
     menu_motoristas,
     menu_alugueis,
-    menu_relatorios
+    menu_relatorios,
+)
+
+from relatorios import (
+    dashboard
 )
 
 escolha_usuario = -1
@@ -21,6 +25,7 @@ while escolha_usuario != 0:
     print('[2] - Motoristas')
     print('[3] - Aluguéis')
     print('[4] - Relatórios')
+    print('[5] - Dashboard')
     print('[0] - Sair')
     print('=' * len('===== LOCADORA ====='))
 
@@ -34,6 +39,8 @@ while escolha_usuario != 0:
         menu_alugueis()
     elif escolha_usuario == 4:
         menu_relatorios()
+    elif escolha_usuario == 5:
+        dashboard()
     elif escolha_usuario == 0:
         print('Saindo do programa...')
     else:

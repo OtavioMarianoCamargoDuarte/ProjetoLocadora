@@ -1,6 +1,6 @@
-import veiculos
-import motoristas
-import alugueis
+from veiculos import veiculos
+from motoristas import motoristas
+from alugueis import alugueis
 
 def relatorio_veiculos_disponiveis():
     """
@@ -192,3 +192,79 @@ def relatorio_alugueis_encerrados():
         print("Nenhum aluguel encerrado no momento.")
     else:
         print(f'Total de aluguéis encerrados: {total_encerrados}')
+
+def dashboard():
+    """
+    Exibe um resumo geral da situação da locadora.
+
+    O dashboard apresenta indicadores consolidados de veículos,
+    motoristas e aluguéis, além da taxa de ocupação da frota,
+    permitindo uma visão rápida do estado atual da locadora.
+    """
+    print('===== DASHBOARD =====')
+    print()
+
+    print('🚗 VEÍCULOS')
+    print(f'Total de veículos cadastrados: {len(veiculos)}')
+    total_disponiveis = 0
+    for veiculo in veiculos:
+        if veiculo['status'] == 'Disponível':
+            total_disponiveis += 1
+    print(f'Disponíveis: {total_disponiveis}')
+
+    total_alugados = 0
+    for veiculo in veiculos:
+        if veiculo['status'] == 'Alugado':
+            total_alugados += 1
+    print(f'Alugados: {total_alugados}')
+
+    total_em_manutencao = 0
+    for veiculo in veiculos:
+        if veiculo['status'] == 'em manutenção':
+            total_em_manutencao += 1
+    print(f'Em Manutenção: {total_em_manutencao}')
+    print()
+
+    print('👤 MOTORISTAS')
+    print(f'Total de motoristas cadastrados: {len(motoristas)}')
+    total_ativos = 0
+    for motorista in motoristas:
+        if motorista['status'] == 'Ativo':
+            total_ativos += 1
+    print(f'Ativos: {total_ativos}')
+
+    total_inadimplentes = 0
+    for motorista in motoristas:
+        if motorista['status'] == 'Inadimplente':
+            total_inadimplentes += 1
+    print(f'Inadimplentes: {total_inadimplentes}')
+
+    total_bloqueados = 0
+    for motorista in motoristas:
+        if motorista['status'] == 'Bloqueado':
+            total_bloqueados += 1
+    print(f'Bloqueados: {total_bloqueados}')
+    print()
+
+    print('📋 ALUGUÉIS')
+    print(f'Total de aluguéis cadastrados: {len(alugueis)}')
+    total_ativos = 0
+    for aluguel in alugueis:
+        if aluguel['status'] == 'Ativo':
+            total_ativos += 1
+    print(f'Ativos: {total_ativos}')
+
+    total_encerrados = 0
+    for aluguel in alugueis:
+        if aluguel['status'] == 'Encerrado':
+            total_encerrados += 1
+    print(f'Encerrados: {total_encerrados}')
+    print()
+
+    print('📈 INDICADORES')
+    if len(veiculos) > 0:
+        taxa_ocupacao = (total_alugados / len(veiculos)) * 100
+    else:
+        taxa_ocupacao = 0
+
+    print(f'Taxa de ocupação da frota: {taxa_ocupacao:.1f}%')
