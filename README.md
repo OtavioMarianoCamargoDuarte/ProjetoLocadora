@@ -165,6 +165,20 @@ python main.py
 - Indicadores operacionais
 - Taxa de ocupação da frota
 
+## 📸 Screenshots
+
+### Dashboard Gerencial
+
+<img src="Imagens/dashboard.png" width="800">
+
+### Criação de Aluguel
+
+<img src="Imagens/criacao_aluguel.png" width="800">
+
+### Menu Principal
+
+<img src="Imagens/menu_principal.png" width="800">
+
 ## 👨‍💻 Autor
 
 **Otavio Mariano Camargo Duarte**
