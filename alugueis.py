@@ -4,6 +4,19 @@ from motoristas import motoristas
 alugueis = []
 
 def criar_aluguel():
+    """
+    Realiza o cadastro de um novo aluguel na locadora.
+
+    Solicita o CPF do motorista e a placa do veículo,
+    verificando se ambos estão cadastrados e aptos para
+    a locação. Caso as validações sejam aprovadas, cria
+    um novo aluguel, registra os dados informados e altera
+    o status do veículo para "Alugado".
+
+    Impede a criação do aluguel quando o motorista estiver
+    bloqueado, inadimplente, inexistente ou quando o veículo
+    não estiver disponível para locação.
+    """
     cpf_solicitar = input('CPF: ')
     if len(motoristas) == 0:
         print('Nenhum motorista cadastrado.')
@@ -83,6 +96,13 @@ def criar_aluguel():
             print('Motorista não encontrado.')
 
 def listar_alugueis():
+    """
+    Exibe todos os aluguéis cadastrados no sistema.
+
+    Lista os dados de cada aluguel, incluindo ID, CPF do motorista,
+    placa do veículo, data de início, valor semanal e status.
+    Caso não existam aluguéis cadastrados, informa ao usuário.
+    """
     print('===== ALUGUÉIS =====')
 
     if len(alugueis) == 0:
@@ -99,6 +119,14 @@ def listar_alugueis():
             print()
 
 def buscar_aluguel():
+    """
+    Busca um aluguel pelo ID informado pelo usuário.
+
+    Exibe os dados do aluguel caso ele seja encontrado,
+    incluindo informações do motorista, veículo, valor
+    semanal e status da locação. Caso o ID não exista,
+    informa que o aluguel não foi encontrado.
+    """
     id_busca = int(input('ID: '))
 
     encontrado = False
@@ -122,6 +150,18 @@ def buscar_aluguel():
         print('Aluguel não encontrado.')
 
 def encerrar_aluguel():
+    """
+    Realiza o encerramento de um aluguel ativo.
+
+    Localiza o aluguel a partir do ID informado pelo usuário,
+    exibe os dados da locação e solicita confirmação para o
+    encerramento. Ao concluir a operação, altera o status do
+    aluguel para "Encerrado" e atualiza o status do veículo
+    para "Disponível".
+
+    Caso o aluguel não exista ou já tenha sido encerrado,
+    informa a situação ao usuário.
+    """
     id_solicitar = int(input('ID: '))
 
     if len(alugueis) == 0:

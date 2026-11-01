@@ -1,7 +1,17 @@
 veiculos = []
 
 def cadastrar_veiculo():
+    """
+    Realiza o cadastro de um novo veículo na locadora.
 
+    Solicita a placa, modelo e ano do veículo, verificando
+    se a placa já está cadastrada no sistema. Caso a placa
+    seja única, cria o registro do veículo e o adiciona à
+    lista de veículos.
+
+    Novos veículos são cadastrados automaticamente com o
+    status "Disponível", ficando aptos para futuras locações.
+    """
     placa = input('Digite a placa: ')
 
     for item in veiculos:
@@ -29,6 +39,13 @@ def cadastrar_veiculo():
     print(f'Total de veículos cadastrados: {len(veiculos)}')
 
 def listar_veiculos():
+    """
+    Exibe todos os veículos cadastrados na locadora.
+
+    Lista as informações de cada veículo, incluindo placa,
+    modelo, ano e status atual. Caso não existam veículos
+    cadastrados, informa a situação ao usuário.
+    """
     print('===== VEÍCULOS =====')
 
     if len(veiculos) == 0:
@@ -43,6 +60,14 @@ def listar_veiculos():
             print()
 
 def buscar_veiculo():
+    """
+    Busca um veículo pela placa informada pelo usuário.
+
+    Exibe os dados do veículo caso ele seja encontrado,
+    incluindo modelo, ano e status atual. Caso a placa
+    não esteja cadastrada, informa que o veículo não foi
+    encontrado.
+    """
     placa_busca = input('Digite a placa do veículo que deseja buscar: ')
 
     encontrado = False
@@ -63,7 +88,17 @@ def buscar_veiculo():
         print('Veículo não encontrado.')
 
 def editar_veiculo():
+    """
+    Permite alterar os dados de um veículo cadastrado.
 
+    Localiza o veículo pela placa informada pelo usuário e
+    disponibiliza opções para atualização do modelo, ano
+    ou status. Após a alteração, exibe os dados atualizados
+    do veículo.
+
+    Caso a placa não esteja cadastrada, informa que o
+    veículo não foi encontrado.
+    """
     placa_editar = input('Digite a placa do veículo que deseja editar: ')
 
     encontrado = False
@@ -130,6 +165,17 @@ def editar_veiculo():
         print('Veículo não encontrado.')     
 
 def excluir_veiculo():
+    """
+    Remove um veículo cadastrado do sistema.
+
+    Localiza o veículo pela placa informada pelo usuário,
+    exibe seus dados e solicita confirmação antes da exclusão.
+    Caso a remoção seja confirmada, o veículo é removido da
+    lista de veículos da locadora.
+
+    Caso a placa informada não esteja cadastrada, informa
+    que o veículo não foi encontrado.
+    """
     placa_excluir = input('Digite a placa do veículo que deseja excluir: ')
 
     encontrado = False

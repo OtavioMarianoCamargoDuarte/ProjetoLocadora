@@ -15,7 +15,14 @@ from motoristas import (
 )
 
 def menu_veiculos():
+    """
+    Exibe o menu de gerenciamento de veículos da locadora.
 
+    Permite ao usuário acessar as operações de cadastro,
+    busca, listagem, edição e exclusão de veículos. O menu
+    permanece em execução até que o usuário escolha retornar
+    ao menu principal.
+    """
     escolha_usuario = -1
 
     while escolha_usuario != 0:
@@ -46,7 +53,14 @@ def menu_veiculos():
             print('Opção inválida. Tente novamente.')
 
 def menu_motoristas():
+    """
+    Exibe o menu de gerenciamento de motoristas da locadora.
 
+    Permite ao usuário acessar as operações de cadastro,
+    busca, listagem, edição e exclusão de motoristas. O menu
+    permanece em execução até que o usuário escolha retornar
+    ao menu principal.
+    """
     escolha_usuario = -1
 
     while escolha_usuario != 0:

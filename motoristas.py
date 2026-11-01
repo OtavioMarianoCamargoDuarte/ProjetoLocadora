@@ -1,6 +1,16 @@
 motoristas = []
 
 def cadastrar_motorista():
+    """
+    Realiza o cadastro de um novo motorista no sistema.
+
+    Solicita os dados do motorista, incluindo nome, data de
+    nascimento, CPF, telefone e CNH. Verifica se o CPF já está
+    cadastrado antes de realizar o registro.
+
+    Novos motoristas são cadastrados com o status "Ativo" e
+    adicionados à lista de motoristas da locadora.
+    """
     nome = input('Nome: ')
     data_nascimento = input('Data de Nascimento (dd/mm/aaaa): ')
     cpf = input('CPF: ')
@@ -33,6 +43,13 @@ def cadastrar_motorista():
     print('-------------------')
 
 def listar_motoristas():
+    """
+    Exibe todos os motoristas cadastrados no sistema.
+
+    Lista as informações de cada motorista, incluindo nome,
+    data de nascimento, CPF, telefone, CNH e status. Caso
+    não existam motoristas cadastrados, informa ao usuário.
+    """
     print('===== MOTORISTAS =====')
 
     if len(motoristas) == 0:
@@ -49,6 +66,14 @@ def listar_motoristas():
             print()
 
 def buscar_motorista():
+    """
+    Busca um motorista pelo CPF informado pelo usuário.
+
+    Exibe os dados do motorista caso ele seja encontrado,
+    incluindo informações pessoais, CNH e status atual.
+    Caso o CPF não esteja cadastrado, informa que o
+    motorista não foi encontrado.
+    """
     cpf_busca = input('Digite o CPF do motorista que deseja buscar: ')
 
     encontrado = False
@@ -71,6 +96,17 @@ def buscar_motorista():
         print('Motorista não encontrado.')
 
 def editar_motorista():
+    """
+    Permite alterar os dados de um motorista cadastrado.
+
+    Localiza o motorista por meio do CPF informado pelo usuário
+    e disponibiliza opções para atualização de nome, data de
+    nascimento, telefone, CNH e status. Após a alteração,
+    exibe os dados atualizados do motorista.
+
+    Caso o CPF não esteja cadastrado, informa que o motorista
+    não foi encontrado.
+    """
     cpf_editar = input('Digite o CPF do motorista que deseja editar: ')
 
     encontrado = False
@@ -172,6 +208,17 @@ def editar_motorista():
         print('Motorista não encontrado.')
 
 def excluir_motorista():
+    """
+    Remove um motorista cadastrado do sistema.
+
+    Localiza o motorista a partir do CPF informado pelo usuário,
+    exibe seus dados e solicita confirmação antes da exclusão.
+    Caso a remoção seja confirmada, o motorista é removido da
+    lista de motoristas da locadora.
+
+    Caso o CPF informado não esteja cadastrado, informa que o
+    motorista não foi encontrado.
+    """
     cpf_excluir = input('Digite o CPF do motorista que deseja excluir: ')
 
     encontrado = False
