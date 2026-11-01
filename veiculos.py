@@ -1,4 +1,9 @@
-veiculos = []
+from persistencia import (
+    salvar_dados,
+    carregar_dados
+)
+
+veiculos = carregar_dados("dados/veiculos.json")
 
 def cadastrar_veiculo():
     """
@@ -30,6 +35,8 @@ def cadastrar_veiculo():
     }
 
     veiculos.append(veiculo)
+
+    salvar_dados(veiculos, "dados/veiculos.json")
 
     print('\nVeículo cadastrado com sucesso!')
     print(f'Placa: {placa}')
@@ -123,6 +130,7 @@ def editar_veiculo():
             if escolha_edicao == 1:
                 novo_modelo = input('Digite o novo modelo: ')
                 item['modelo'] = novo_modelo
+                salvar_dados(veiculos, "dados/veiculos.json")
                 print('Veículo atualizado com sucesso!')
                 print(f'Placa: {item["placa"]}')
                 print(f'Modelo: {item["modelo"]}')
@@ -134,6 +142,7 @@ def editar_veiculo():
             elif escolha_edicao == 2:
                 novo_ano = int(input('Digite o novo ano: '))
                 item['ano'] = novo_ano
+                salvar_dados(veiculos, "dados/veiculos.json")
                 print('Veículo atualizado com sucesso!')
                 print(f'Placa: {item["placa"]}')
                 print(f'Modelo: {item["modelo"]}')
@@ -145,6 +154,7 @@ def editar_veiculo():
             elif escolha_edicao == 3:
                 novo_status = input('Digite o novo status (disponível, em manutenção, alugado): ')
                 item['status'] = novo_status
+                salvar_dados(veiculos, "dados/veiculos.json")
                 print('Veículo atualizado com sucesso!')
                 print(f'Placa: {item["placa"]}')
                 print(f'Modelo: {item["modelo"]}')
@@ -196,6 +206,7 @@ def excluir_veiculo():
 
             if escolha_exclusao == 1:
                 veiculos.remove(item)
+                salvar_dados(veiculos, "dados/veiculos.json")
                 print('Veículo excluído com sucesso!')
                 break
 

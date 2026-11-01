@@ -1,7 +1,11 @@
 from veiculos import veiculos
 from motoristas import motoristas
+from persistencia import (
+    salvar_dados,
+    carregar_dados
+)
 
-alugueis = []
+alugueis = carregar_dados("dados/alugueis.json")
 
 def criar_aluguel():
     """
@@ -82,6 +86,11 @@ def criar_aluguel():
                     alugueis.append(aluguel)
 
                     veiculo['status'] = 'Alugado'
+
+                    salvar_dados(alugueis, "dados/alugueis.json")
+                    salvar_dados(veiculos, "dados/veiculos.json")
+
+
 
                     print('Aluguel criado com sucesso!')
                     print(f'ID: {id_aluguel}')
@@ -198,6 +207,8 @@ def encerrar_aluguel():
                     for veiculo in veiculos:
                         if veiculo['placa'] == aluguel['placa_veiculo']:
                             veiculo['status'] = 'Disponível'
+                            salvar_dados(veiculos, "dados/veiculos.json")
+                            salvar_dados(alugueis, "dados/alugueis.json")
                             break
                     print('Aluguel encerrado com sucesso.')
                     break

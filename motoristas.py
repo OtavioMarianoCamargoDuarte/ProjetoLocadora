@@ -1,4 +1,9 @@
-motoristas = []
+from persistencia import (
+    salvar_dados,
+    carregar_dados
+)
+
+motoristas = carregar_dados("dados/motoristas.json")
 
 def cadastrar_motorista():
     """
@@ -32,6 +37,8 @@ def cadastrar_motorista():
     }
 
     motoristas.append(motorista)
+
+    salvar_dados(motoristas, "dados/motoristas.json")
 
     print('\nMotorista cadastrado com sucesso!')
     print(f'Nome: {nome}')
@@ -135,6 +142,7 @@ def editar_motorista():
             if escolha_edicao == 1:
                 novo_nome = input('Digite o novo nome: ')
                 item['nome'] = novo_nome
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista atualizado com sucesso!')
                 print(f'Nome: {item["nome"]}')
                 print(f'Data de Nascimento: {item["data_nascimento"]}')
@@ -148,6 +156,7 @@ def editar_motorista():
             elif escolha_edicao == 2:
                 nova_data_nascimento = input('Digite a nova data de nascimento (dd/mm/aaaa): ')
                 item['data_nascimento'] = nova_data_nascimento
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista atualizado com sucesso!')
                 print(f'Nome: {item["nome"]}')
                 print(f'Data de Nascimento: {item["data_nascimento"]}')
@@ -161,6 +170,7 @@ def editar_motorista():
             elif escolha_edicao == 3:
                 novo_telefone = input('Digite o novo telefone: ')
                 item['telefone'] = novo_telefone
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista atualizado com sucesso!')
                 print(f'Nome: {item["nome"]}')
                 print(f'Data de Nascimento: {item["data_nascimento"]}')
@@ -174,6 +184,7 @@ def editar_motorista():
             elif escolha_edicao == 4:
                 nova_cnh = input('Digite a nova CNH: ')
                 item['cnh'] = nova_cnh
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista atualizado com sucesso!')
                 print(f'Nome: {item["nome"]}')
                 print(f'Data de Nascimento: {item["data_nascimento"]}')
@@ -187,6 +198,7 @@ def editar_motorista():
             elif escolha_edicao == 5:
                 novo_status = input('Digite o novo status (Ativo/Inadimplente/Bloqueado): ')
                 item['status'] = novo_status
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista atualizado com sucesso!')
                 print(f'Nome: {item["nome"]}')
                 print(f'Data de Nascimento: {item["data_nascimento"]}')
@@ -241,6 +253,7 @@ def excluir_motorista():
 
             if escolha_exclusao == 1:
                 motoristas.remove(item)
+                salvar_dados(motoristas, "dados/motoristas.json")
                 print('Motorista excluído com sucesso!')
                 break
 

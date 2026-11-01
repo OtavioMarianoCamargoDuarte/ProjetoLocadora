@@ -14,6 +14,13 @@ from motoristas import (
     excluir_motorista
 )
 
+from alugueis import (
+    criar_aluguel,
+    listar_alugueis,
+    buscar_aluguel,
+    encerrar_aluguel
+)
+
 def menu_veiculos():
     """
     Exibe o menu de gerenciamento de veículos da locadora.
@@ -91,4 +98,37 @@ def menu_motoristas():
             print('Opção inválida. Tente novamente.')
 
 def menu_alugueis():
-    pass
+    """
+    Exibe o menu de gerenciamento de aluguéis da locadora.
+
+    Permite ao usuário acessar as operações de criação,
+    busca, listagem e encerramento de aluguéis. O menu
+    permanece em execução até que o usuário escolha retornar
+    ao menu principal.
+    """
+
+    escolha_usuario = -1
+    
+    while escolha_usuario != 0:
+        print('===== ALUGUEIS =====')
+        print('[1] - Criar aluguel')
+        print('[2] - Buscar aluguel')
+        print('[3] - Listar alugueis')
+        print('[4] - Encerrar aluguel')
+        print('[0] - Voltar')
+        print('=' * len('===== ALUGUEIS ====='))
+
+        escolha_usuario = int(input('Opção: '))
+
+        if escolha_usuario == 1:
+            criar_aluguel()
+        elif escolha_usuario == 2:
+            buscar_aluguel()
+        elif escolha_usuario == 3:
+            listar_alugueis()
+        elif escolha_usuario == 4:
+            encerrar_aluguel()
+        elif escolha_usuario == 0:
+            print('Voltando ao menu principal...')
+        else:
+            print('Opção inválida. Tente novamente.')
